@@ -46,10 +46,6 @@ class linear_regression():
         return self.b0 + self.b1*x
 
     def ordinary_least_squares(self):
-        """
-        :param x,y: coordinates
-        :return: b0,b1
-        """
         n = np.size(self.x)
         x_mean = np.mean(self.x)
         y_mean = np.mean(self.y)

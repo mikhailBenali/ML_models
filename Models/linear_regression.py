@@ -55,12 +55,13 @@ class linear_regression():
         self.b1 = (x_mean * y_mean - xy_mean) / (x_mean**2 - x_squared_mean)
         self.b0 = y_mean - self.b1 * x_mean
 
+        print(f"Least squares coefficients:")
         self.show_coeffs()
         self.plot("green")
 
 
 def tests():
-    for _ in range(10):
+    for _ in range(3):
         x = np.random.randint(0, 100, 500)
         y = np.random.normal(30, 60, 500)
 
@@ -70,7 +71,7 @@ def tests():
         f.plot()
 
         # We fit the model
-        f.fit(5*10**-5, 100)
+        f.fit(5*10**-5, 10**4)
         f.show_coeffs()
         f.plot()
 
